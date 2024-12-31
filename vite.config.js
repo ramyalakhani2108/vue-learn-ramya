@@ -19,6 +19,9 @@ export default defineConfig({
       }
     }
   },
+  optimizeDeps: {
+    include: ['primeicons']
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
