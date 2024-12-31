@@ -1,0 +1,10 @@
+[build]
+  # Directory containing the functions (e.g., json-server handler)
+  functions = "netlify/functions"
+  publish = "dist" # Replace with your frontend's build directory (e.g., "dist" for Vite)
+
+[[redirects]]
+  # Redirect API requests to the json-server function
+  from = "/api/*"
+  to = "/.netlify/functions/json-server"
+  status = 200

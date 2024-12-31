@@ -13,14 +13,11 @@ export default defineConfig({
   server:{
     proxy: {
       '/api' : {
-        target: 'https://aesthetic-kelpie-ad2dd2.netlify.app',
+        target: 'http://localhost:5001/',
         changeOrigin: true,
         rewrite: path => path.replace('/api', '')
       }
     }
-  },
-  optimizeDeps: {
-    include: ['primeicons']
   },
   resolve: {
     alias: {
